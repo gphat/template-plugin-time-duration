@@ -6,7 +6,7 @@ our $VERSION = '0.01';
 require Template::Plugin;
 use base qw(Template::Plugin);
 
-use Time::Duration;
+use Time::Duration qw();
 
 sub ago { shift; return Time::Duration::ago(@_) };
 
