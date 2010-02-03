@@ -6,7 +6,9 @@ use Test::More;
 
 use Template;
 
-use ok 'Template::Plugin::Time::Duration';
+BEGIN {
+    use_ok('Template::Plugin::Time::Duration');
+};
 
 ok( Template->new->process(
     \qq{[% USE time_dir = Time.Duration; time_dir.ago(0) %]},
